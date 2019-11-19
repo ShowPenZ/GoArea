@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            /*border: 1px solid #000;*/
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .box > div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /*border: 1px solid #000;*/
+            border-radius: 50%;
+            transition: all 2s;
+            backface-visibility: hidden;
+        }
+
+        .box1 {
+            background: url(images/bg.png) left 0 no-repeat; /*默认显示图片的左半边*/
+        }
+
+        .box2 {
+            background: url(images/bg.png) right 0 no-repeat;
+            transform: rotateY(180deg); /*让图片的右半边默认时，旋转180度，就可以暂时隐藏起来*/
+
+        }
+
+        .box:hover .box1 {
+            transform: rotateY(180deg); /*让图片的左半边转消失*/
+        }
+
+        .box:hover .box2 {
+            transform: rotateY(0deg); /*让图片的左半边转出现*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
