@@ -2,7 +2,7 @@
  * @Author: ShowPenZ
  * @Date: 2019-11-21 19:59:09
  * @LastEditors: ShowPenZ
- * @LastEditTime: 2019-11-21 20:05:23
+ * @LastEditTime: 2019-11-22 18:20:12
  * @Description: file content
  */
 package main
@@ -30,7 +30,19 @@ func modifyString() {
 	fmt.Println(s1)
 }
 
+func test() {
+	var a = [...]int{1, 2, 3, 4, 5}
+
+	b := a[1:3]
+	b[0] = 100
+	c := append(b, 7)
+	b[1] = 100
+	fmt.Println(a, c)
+
+}
+
 func main() {
-	testString()
-	modifyString()
+	// testString()
+	// modifyString()
+	test()
 }
