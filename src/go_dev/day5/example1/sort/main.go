@@ -27,7 +27,15 @@ func testStringSort() {
 	fmt.Println(a)
 }
 
+func testFloat() {
+	var a = [...]float64{2.3, 0.5, 0.7, 0.2, 13123.3, 0.002}
+	sort.Float64s(a[:])
+
+	fmt.Println(a)
+}
+
 func main() {
 	testIntSort()
 	testStringSort()
+	testFloat()
 }

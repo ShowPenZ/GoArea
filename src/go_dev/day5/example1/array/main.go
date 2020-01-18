@@ -15,6 +15,7 @@ func uselessModify(arr [5]int) {
 	return
 }
 
+//有效的修改数组 传指针进去
 func usefulModify(arr *[5]int) {
 	arr[0] = 100
 	// 正式点的写法
@@ -60,6 +61,7 @@ func main() {
 
 	uselessModify(arr)
 
+	//取地址
 	usefulModify(&drr)
 
 	fmt.Println(arr)

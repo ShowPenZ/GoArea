@@ -62,7 +62,7 @@ func testSlice() {
 	var a []int
 	var arr [5]int = [...]int{1, 2, 3, 4, 5}
 
-	a = arr[:]
+	a = arr[:] //包含整个数组
 	fmt.Println(a)
 	fmt.Println(cap(a))
 
